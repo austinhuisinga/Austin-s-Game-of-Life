@@ -27,7 +27,7 @@ export default function GridContainer () {
     return (
         <div className='grid_container'>
             <h1>Generation: {generation}</h1>
-            <div className='grid_and_default_buttons'>
+            <div className='grid_and_buttons'>
                 <Grid
                     grid={grid}
                     setGrid={setGrid}
@@ -40,7 +40,6 @@ export default function GridContainer () {
                     gridSize={gridSize}
                     setGridSize={setGridSize}
                     createRandomGrid={createRandomGrid}
-                    setDefaultGrid={setDefaultGrid}
                     clickable={clickable}
                 />
             </div>

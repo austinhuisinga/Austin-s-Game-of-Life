@@ -1,12 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { defaultGrid } from './default-grid'
 import getNeighbors from './neighbors'
-import {
-  defaultGrid1,
-  defaultGrid2,
-  defaultGrid3,
-  defaultGrid4
-} from './default-grids'
 
 export const useInterval = (callback, delay, grid, clickable) => {
     const savedCallback = useRef();
@@ -29,7 +23,7 @@ export const useInterval = (callback, delay, grid, clickable) => {
 }
 
 export const useGrid = () => {
-    const [grid, setGrid] = useState(defaultGrid1) // test this
+    const [grid, setGrid] = useState(defaultGrid) // test this
     const [generation, setGeneration] = useState(0)
     const [clickable, setClickable] = useState(true)
     const [speed, setSpeed] = useState('')
@@ -129,22 +123,6 @@ export const useGrid = () => {
       switch (e.target.value) {
         case "Clear Grid":
           setGridSize(15);
-          setGrid(defaultGrid1);
-          setGeneration(0);
-          break;
-        case "Default Grid 1":
-          setGridSize(15);
-          setGrid(defaultGrid2);
-          setGeneration(0);
-          break;
-        case "Default Grid 2":
-          setGridSize(15);
-          setGrid(defaultGrid3);
-          setGeneration(0);
-          break;
-        case "Default Grid 3":
-          setGridSize(15);
-          setGrid(defaultGrid4);
           setGeneration(0);
           break;
         default:
